@@ -1,0 +1,19 @@
+{
+  "name": "bloom-digitals-andres-exercise",
+  "version": "1.0.0",
+  "description": "MERN application with authentication, task management (CRUD), and external API integration",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "echo 'Installing root dependencies...'",
+    "postinstall": "echo 'Installing backend dependencies...' && cd backend && npm install --silent && echo 'Installing frontend dependencies...' && cd ../frontend && npm install --silent && echo 'All dependencies installed successfully!'",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start"
+  },
+  "keywords": [],
+  "author": "Andres Olvera",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
